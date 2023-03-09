@@ -1,8 +1,10 @@
+import json
+import os
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-cred = credentials.Certificate('./hedgehog-c9b07-gcloud-admin-key.json')
+cred = credentials.Certificate(json.loads(os.environ["FIREBASE_ADMIN_KEY"]))
 
 app = firebase_admin.initialize_app(cred)
 

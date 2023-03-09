@@ -21,8 +21,9 @@
 #   print("-------")
 #   print(prev_text)
 
+import os
 from revChatGPT.V3 import Chatbot
-chatbot = Chatbot(api_key="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")
+chatbot = Chatbot(api_key=os.environ["OPENAI_API_KEY"])
 
 
 
